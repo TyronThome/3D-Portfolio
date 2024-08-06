@@ -19,26 +19,26 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer based in South Africa, Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Atque consequuntur dolorum non dolores
-          dicta quisquam quam tempore, soluta vel vero eveniet voluptas
-          asperiores, fugiat architecto. Natus aut quas laudantium perferendis?
+          Passionate software engineer crafting innovative solutions to complex
+          problems. With a focus on building scalable and user-friendly web
+          applications, I specialize in leveraging cutting-edge technologies
+          like React and Next.js to deliver exceptional digital experiences.
         </p>
       </div>
 
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
-
         <div className="mt-16 flex flex-wrap gap-12">
           {skills.map((skill) => (
-            <div className="block-container w-20 h-20">
+            <div className="block-container w-20 h-20" key={skill.name}>
               <div className="btn-back rounded-xl" />
-              <div className="btn-front rounded-xl flex justify-center items-center">
+              <div className="btn-front rounded-xl flex justify-center items-center flex-col">
                 <img
                   src={skill.imageUrl}
                   alt={skill.name}
                   className="w-1/2 h-1/2 object-contain"
                 />
+                <p className="px-2 py-1 font-base">{skill.name}</p>
               </div>
             </div>
           ))}
